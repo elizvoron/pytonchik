@@ -3,45 +3,37 @@ from random import randint
 
 def gun():
     a = randint(1, 6)
-    if a < 5:
-        return 1
+    if a <= 5:
+        return True
     else:
-        raise ValueError
+        return False
 
 
-n1 = 0
+n1 = []
 for i in range(300):
-    try:
-        vv = gun()
-    except ValueError:
-        vv = 0
-    if vv == 1:
-        n1 += 1
-print(n1 / 300)
-n1 = 0
+    n2 = 0
+    while gun() is True:
+        n2 += 1
+    n1.append(n2)
+print(sum(n1) / len(n1))
+n1 = []
 for i in range(3000):
-    try:
-        vv = gun()
-    except ValueError:
-        vv = 0
-    if vv == 1:
-        n1 += 1
-print(n1 / 3000)
-n1 = 0
+    n2 = 0
+    while gun() is True:
+        n2 += 1
+    n1.append(n2)
+print(sum(n1) / len(n1))
+n1 = []
 for i in range(30000):
-    try:
-        vv = gun()
-    except ValueError:
-        vv = 0
-    if vv == 1:
-        n1 += 1
-print(n1 / 30000)
-n1 = 0
+    n2 = 0
+    while gun() is True:
+        n2 += 1
+    n1.append(n2)
+print(sum(n1) / len(n1))
+n1 = []
 for i in range(300000):
-    try:
-        vv = gun()
-    except ValueError:
-        vv = 0
-    if vv == 1:
-        n1 += 1
-print(n1 / 300000)
+    n2 = 0
+    while gun() is True:
+        n2 += 1
+    n1.append(n2)
+print(sum(n1) / len(n1))
